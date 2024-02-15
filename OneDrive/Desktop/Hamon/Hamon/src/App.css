@@ -1,3 +1,7 @@
+* {
+  list-style: none;
+}
+
 body {
   background-color: black;
   /* padding-inline: 145px; */
@@ -5,7 +9,7 @@ body {
 
 .header {
   display: flex;
-  margin: 10px 100px 0px;
+  margin: 20px 100px 0px;
   justify-content: space-between;
   color: white;
   font-size: 22px;
@@ -18,4 +22,45 @@ body {
 
 .cart-icon {
   size: 30px;
+}
+
+.cart {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  top: -3px;
+  left: 17px;
+}
+
+.nav-bar {
+  margin: 20px 100px 0px 60px;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 33px;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+li {
+  padding-inline: 10px;
+}
+
+.active {
+  color: red;
+  text-decoration: underline;
+  text-underline-offset: 18px;
+  padding-bottom: 30px;
 }
