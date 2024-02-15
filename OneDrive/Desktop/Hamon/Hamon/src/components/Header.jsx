@@ -1,6 +1,13 @@
 import { CiShoppingCart } from "react-icons/ci";
 import { IconContext } from "react-icons";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 function Header() {
+    const [cart, setCart] = useState(0);
+    const data = useSelector(state => state.menu)
+    useEffect(() => {
+        setCart(data?.cart?.length)
+    }, [data])
     return (
         <div className='header'>
             <div>Artisan Resto Cafe</div>
@@ -12,7 +19,7 @@ function Header() {
                             <CiShoppingCart />
                         </IconContext.Provider>
                     </div>
-                    <div className="badge">0</div>
+                    <div className="badge">{cart}</div>
                 </div>
 
             </div>
