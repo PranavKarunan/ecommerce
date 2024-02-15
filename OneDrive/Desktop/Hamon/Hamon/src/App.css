@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -160,4 +161,178 @@ button {
   height: 100px;
   object-fit: cover;
   border-radius: 25px;
+}
+
+@media (max-width: 997px) and (min-width : 600px) {
+  .nav-menu {
+    display: flex;
+    gap: 33px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* justify-content: space-between; */
+    /* width: auto; */
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  .home-page {
+    margin: 20px 10px 0px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 22px;
+  }
+
+  .order-part {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cart-icon {
+    size: 30px;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .badge {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    top: -3px;
+    left: 17px;
+  }
+
+  .nav-bar {
+    /* margin: 20px 0px 0px 60px; */
+    color: white;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 33px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* justify-content: space-between; */
+    /* width: auto; */
+  }
+
+  .nav-item {
+    cursor: pointer;
+  }
+
+  li {
+    padding-inline: 10px;
+
+  }
+
+  .active {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 20px;
+  }
+
+  .card {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-block: 15px;
+    border-bottom: 1px solid #18212f;
+  }
+
+  .sec-txt {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .txt-2 {
+    font-size: 12px;
+  }
+
+  .txt-3 {
+    color: #465455;
+    font-size: 12px;
+  }
+
+  .txt-4 {
+    color: red;
+    font-size: 12px;
+  }
+
+  button {
+    width: 100px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #19a046;
+    border-radius: 10px;
+    border: inset 0;
+    margin-top: 10px;
+  }
+
+  .icn {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+
+
+  .card-details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-details span {
+    margin-top: 10px;
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-title span {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
+  .card-image2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-image {
+    display: flex;
+  }
+
+  .card-image li {
+    font-size: 12px;
+    margin-top: 20px;
+
+  }
+
+  .card-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
 }
