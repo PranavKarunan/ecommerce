@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  /* padding-inline: 145px; */
+}
+
+.header {
+  display: flex;
+  margin: 10px 100px 0px;
+  justify-content: space-between;
+  color: white;
+  font-size: 22px;
+}
+
+.order-part {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-icon {
+  size: 30px;
+}
