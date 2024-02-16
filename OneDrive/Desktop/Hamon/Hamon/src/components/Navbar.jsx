@@ -5,7 +5,7 @@ function Navbar({ category, menu, setMenu }) {
     const [selectedCategory, setSelectedCategory] = useState('');
     const dispatch = useDispatch();
     useEffect(() => {
-        setSelectedCategory(category[0]);
+        setSelectedCategory(category?.[0]);
     }, [category])
 
     function handleChangeCategory(menu) {

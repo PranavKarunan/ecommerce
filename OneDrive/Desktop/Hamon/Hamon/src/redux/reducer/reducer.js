@@ -1,11 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
     menu_categories: [],
     menu_list: [],
     cart: [],
-    selected_category: ''
+    selected_category: '',
+    // status: "idle",
+    // error: null,
 }
+
+// export const fetchData = createAsyncThunk("menu/fetchData", async () => {
+//     try {
+//         const response = await axios.get("https://run.mocky.io/v3/db0018c8-5982-4d89-a54f-f51fe14d3c89");
+//         return response.data;
+//     } catch (error) {
+//         throw error;
+//     }
+// });
+
 const menuSlice = createSlice({
     name: 'Menu',
     initialState,
@@ -45,6 +58,21 @@ const menuSlice = createSlice({
             state.selected_category = action.payload.dish_id;
         }
     }
+    // ,
+    // extraReducers: (builder) => {
+    //     builder
+    //         .addCase(fetchData.pending, (state) => {
+    //             state.status = "loading";
+    //         })
+    //         .addCase(fetchData.fulfilled, (state, action) => {
+    //             state.status = "succeeded";
+    //             state.menu_list = action.payload;
+    //         })
+    //         .addCase(fetchData.rejected, (state, action) => {
+    //             state.status = "failed";
+    //             state.error = action.error.message;
+    //         });
+    // },
 })
 
 export const { addToCart, removeCart, addMenus, addMenuCategory, updateCategory } = menuSlice.actions

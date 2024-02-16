@@ -62,9 +62,9 @@ function MenuCard({ menu }) {
                             <span className='txt-3'>{item?.dish_description}</span>
                             {item?.dish_Availability ? <button>
                                 <div className='icn'>
-                                    <li onClick={() => handleRemove(item)}>-</li>
-                                    <li>{count(item) || 0}</li>
-                                    <li onClick={() => handleAdd(item)}>+</li>
+                                    <p onClick={() => handleRemove(item)}>-</p>
+                                    <p>{count(item) || 0}</p>
+                                    <p onClick={() => handleAdd(item)}>+</p>
                                 </div>
                             </button> : <span className='txt-4'>Not Available</span>}
 
@@ -72,7 +72,7 @@ function MenuCard({ menu }) {
                             {/* </div> */}
                         </div>
                         <div className='card-image'>
-                            <li>{item?.dish_calories} calories</li>
+                            <li className='txt-5'>{item?.dish_calories} calories</li>
                             <div className='card-img'>
                                 <img className='card-image2' src={item?.dish_image} alt="" />
                             </div>
